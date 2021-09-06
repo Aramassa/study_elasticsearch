@@ -1,2 +1,7 @@
 ports:
   - port: 5601
+tasks:
+  - name: Launch ElasticSearch
+    command: >
+      docker network create elastic &&
+      docker-compose up -d
